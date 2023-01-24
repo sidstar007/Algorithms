@@ -6,6 +6,7 @@ int min(int a,int b) {
     return a<b?a:b;
 }
 
+//Memoization
 int TDcoinChange(int dp[],int coins[],int n,int amount) {
     if (amount==0) {
         return 0;
@@ -24,6 +25,7 @@ int TDcoinChange(int dp[],int coins[],int n,int amount) {
     return dp[amount]=ans;
 }
 
+//Tabulation
 int BUcoinChange(int coins[],int n,int amount) {
     int dp[amount+1];
     
@@ -46,12 +48,21 @@ int BUcoinChange(int coins[],int n,int amount) {
     }
 }
 
-
+//Driver Code
 int main() {
-    int coins[]={1,2,5,5,54,3,3,23,23,2,32,3};
+    printf("Enter number of coins: ");
+    int n;
+    scanf("%d",&n);
+    int coins[n];
+    for (int i=0;i<n;++i) {
+        scanf("%d",&coins[i]);
+    }
+    printf("Enter amount: ");
+    int amount;
+    scanf("%d",&amount);
     clock_t t;
     t=clock();
-    printf("%d",BUcoinChange(coins,3,110));
+    printf("%d",BUcoinChange(coins,n,amount));
     t=clock()-t;
     double time_taken = (double)(t)/CLOCKS_PER_SEC;
     printf("Time: %lf",time_taken);
