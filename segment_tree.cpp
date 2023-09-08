@@ -49,7 +49,7 @@ int main() {
 
     // building segment tree (1 indexed)
     build(1, 0, n-1);
-    for (int i=1; i<15; ++i) {
+    for (int i=1; i<4*n; ++i) {
         cout << tree[i] << " ";
     }
 
