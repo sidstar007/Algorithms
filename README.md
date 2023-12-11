@@ -1,3 +1,3 @@
 # Algorithms
 
-This repositry contains some of the algorithm codes (mostly Dynamic Programming and Backtracking) new algorithms would be added soon.
+This repositry contains some common algorithm codes in c and c++.
