@@ -28,7 +28,7 @@ class Trie {
         }
 
         ~Trie() {
-        delete start;
+            delete start;
         }
 
         void add(string s) {
